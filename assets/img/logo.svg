@@ -1,0 +1,7 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Nền icon bo góc chuẩn thiết kế -->
+  <rect width="40" height="40" rx="10" fill="#3A6F8F"/>
+  <!-- Biểu tượng mái nhà & chiếc giường/chìa khóa kết hợp -->
+  <path d="M20 9L9 18H12V29H28V18H31L20 9Z" fill="#F47D24"/>
+  <path d="M16 22H24V29H16V22Z" fill="#FFFFFF"/>
+</svg>
