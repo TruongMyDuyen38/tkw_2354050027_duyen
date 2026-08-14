@@ -46,4 +46,52 @@
   .btn-outline {
     @apply border border-line bg-surface text-ink hover:bg-brand-50 font-medium;
   }
+  /* Khung Section Features & Container */
+  .feature-section {
+    @apply flex w-full flex-col items-center bg-surface-subtle py-[96px] gap-[80px];
+  }
+  .feature-container {
+    @apply mx-auto flex w-[1280px] flex-col items-center gap-[80px];
+  }
+
+  /* Khung Row 2 cột */
+  .feature-row {
+    @apply flex w-[1280px] flex-row items-center justify-between gap-[64px];
+  }
+  .feature-content {
+    @apply flex w-[608px] flex-col items-start gap-[32px];
+  }
+
+  /* Typography tiêu đề & mô tả */
+  .feature-heading {
+    @apply font-display text-[36px] font-extrabold leading-[125%] tracking-[-0.01em] text-ink;
+  }
+  .feature-desc {
+    @apply font-body text-[20px] font-normal leading-[150%] text-muted;
+  }
+
+  /* Danh sách & Item checkmark tái sử dụng */
+  .feature-list {
+    @apply flex w-[608px] flex-col items-start gap-[16px] pt-[32px];
+  }
+  .feature-item {
+    @apply flex h-[24px] w-[608px] flex-row items-center gap-[8px];
+  }
+  .feature-item-icon {
+    @apply h-[20px] w-[20px] shrink-0 text-purple-600;
+  }
+  .feature-item-text {
+    @apply w-[580px] font-body text-[16px] font-medium leading-[150%] text-ink;
+  }
+
+  /* Khung hình ảnh */
+  .feature-img-box {
+    @apply flex h-[455px] w-[608px] items-center justify-center p-[10px];
+  }
+  .feature-img-box-alt {
+    @apply flex h-[454px] w-[608px] items-center justify-center py-[10px] pr-[10px] pl-0;
+  }
+  .feature-img {
+    @apply h-[435px] w-[598px] object-contain;
+  }
 }

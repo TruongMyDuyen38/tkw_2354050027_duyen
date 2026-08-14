@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,6 +26,8 @@
       Bỏ qua đến nội dung chính
     </a>
 
+    <!-- HEADER / NAVBAR        -->
+
     <header class="w-full border-b border-line bg-surface">
       <nav
         class="mx-auto flex h-[85px] w-[1280px] items-center justify-between py-[24px]"
@@ -38,12 +40,12 @@
             class="flex h-[36px] w-[155.76px] items-center gap-[12px]"
             aria-label="ResiStay - Trang chủ"
           >
-            <!-- Logo Icon -->
             <svg
               class="h-[32.62px] w-[29.76px] shrink-0"
               viewBox="0 0 40 40"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <rect width="40" height="40" rx="10" fill="#3A6F8F" />
               <path d="M20 9L9 18H12V29H28V18H31L20 9Z" fill="#F47D24" />
@@ -106,7 +108,6 @@
           </ul>
         </div>
 
-
         <div class="flex items-center gap-[16px]">
           <a
             href="#login"
@@ -117,7 +118,7 @@
 
           <a
             href="#cta"
-            class="btn btn-primary rounded-card font-body text-[14px] font-medium leading-[150%] tracking-tight px-[12px] py-[8px]"
+            class="btn btn-primary rounded-card px-[12px] py-[8px] font-body text-[14px] font-medium leading-[150%] tracking-tight"
           >
             Dùng thử miễn phí
           </a>
@@ -125,8 +126,8 @@
       </nav>
     </header>
 
-  
     <main id="main-content">
+      <!-- HERO SECTION -->
 
       <section
         id="hero"
@@ -138,7 +139,6 @@
         >
           <div class="flex w-[736px] flex-col items-start gap-[40px]">
             <div class="flex w-[736px] flex-col items-start gap-[24px]">
-              <!-- Heading -->
               <h1
                 id="hero-title"
                 class="font-display text-[52px] font-extrabold leading-[56px] -tracking-[0.03em] text-ink"
@@ -148,27 +148,29 @@
                 khách sạn toàn diện.
               </h1>
 
-             
+              <p class="font-body text-[18px] leading-[150%] text-muted">
+                Tối ưu quy trình vận hành, tự động đồng bộ phòng trên mọi kênh
+                OTA và nâng tầm trải nghiệm của khách lưu trú.
+              </p>
+            </div>
 
-            <!-- Buttons -->
             <div class="flex items-center gap-[16px]">
               <a
                 href="#cta"
-                class="btn btn-primary rounded-card font-body text-[16px] font-medium leading-[150%] h-[48px] px-[20px] py-[12px] whitespace-nowrap"
+                class="btn btn-primary rounded-card h-[48px] px-[20px] py-[12px] font-body text-[16px] font-medium leading-[150%] whitespace-nowrap"
               >
                 Bắt đầu dùng thử
               </a>
 
               <a
                 href="#features"
-                class="btn btn-outline rounded-card font-body text-[16px] font-medium leading-[150%] h-[48px] px-[20px] py-[12px] whitespace-nowrap"
+                class="btn btn-outline rounded-card h-[48px] px-[20px] py-[12px] font-body text-[16px] font-medium leading-[150%] whitespace-nowrap"
               >
                 Xem tính năng
               </a>
             </div>
           </div>
 
-          
           <figure class="flex items-center justify-between">
             <img
               src="./assets/img/hero-hotel.png"
@@ -176,6 +178,390 @@
               class="h-[416px] w-[532px] object-contain"
             />
           </figure>
+        </div>
+      </section>
+
+      <!-- SECTION 1: CUSTOMER LOGOS (#brands)                              -->
+
+      <section
+        id="brands"
+        class="w-full bg-white"
+        style="background-color: #ffffff; padding-bottom: 96px"
+        aria-labelledby="brands-title"
+      >
+        <div
+          class="mx-auto flex h-[55px] w-[1280px] items-center justify-between"
+          style="
+            width: 1280px;
+            height: 55px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <h2 id="brands-title" class="sr-only">
+            Đối tác kênh bán & khách sạn liên kết
+          </h2>
+
+          <ul
+            class="flex h-[55px] w-[1280px] items-center justify-between"
+            style="
+              width: 1280px;
+              height: 55px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              color: #6b7280;
+            "
+          >
+            <!-- 1. Booking.com -->
+            <li
+              class="flex h-[41.76px] w-[128px] shrink-0 items-center justify-center"
+            >
+              <span
+                class="font-display text-[22px] font-extrabold tracking-tight"
+                style="
+                  font-size: 22px;
+                  font-weight: 800;
+                  letter-spacing: -0.02em;
+                "
+              >
+                Booking.com
+              </span>
+            </li>
+
+            <!-- 2. Agoda -->
+            <li
+              class="flex h-[32.81px] w-[150px] shrink-0 items-center justify-center"
+            >
+              <span
+                class="font-display text-[24px] font-bold tracking-tight"
+                style="
+                  font-size: 24px;
+                  font-weight: 700;
+                  letter-spacing: -0.02em;
+                "
+              >
+                agoda
+              </span>
+            </li>
+
+            <!-- 3. Traveloka -->
+            <li
+              class="flex h-[39.99px] w-[128px] shrink-0 items-center justify-center"
+            >
+              <span
+                class="font-display text-[22px] font-bold tracking-tight"
+                style="
+                  font-size: 22px;
+                  font-weight: 700;
+                  letter-spacing: -0.02em;
+                "
+              >
+                traveloka
+              </span>
+            </li>
+
+            <!-- 4. Airbnb -->
+            <li
+              class="flex h-[37.23px] w-[136px] shrink-0 items-center justify-center"
+            >
+              <span
+                class="font-display text-[23px] font-bold tracking-tight"
+                style="
+                  font-size: 23px;
+                  font-weight: 700;
+                  letter-spacing: -0.02em;
+                "
+              >
+                airbnb
+              </span>
+            </li>
+
+            <!-- 5. TripAdvisor -->
+            <li
+              class="flex h-[55px] w-[110px] shrink-0 items-center justify-center"
+            >
+              <span
+                class="font-display text-[21px] font-bold tracking-tight"
+                style="
+                  font-size: 21px;
+                  font-weight: 700;
+                  letter-spacing: -0.02em;
+                "
+              >
+                Tripadvisor
+              </span>
+            </li>
+
+            <!-- 6. Marriott -->
+            <li
+              class="flex h-[27.58px] w-[132px] shrink-0 items-center justify-center"
+            >
+              <span
+                class="font-display text-[21px] font-extrabold tracking-wider"
+                style="
+                  font-size: 21px;
+                  font-weight: 800;
+                  letter-spacing: 0.05em;
+                "
+              >
+                MARRIOTT
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SECTION 2: FEATURES (#features)  -->
+
+      <section
+        id="features"
+        class="feature-section"
+        aria-labelledby="features-title"
+      >
+        <div class="feature-container">
+          <!-- HÀNG 1: Text trái - Ảnh phải -->
+          <div class="feature-row h-[455px]">
+            <!-- Cột trái -->
+            <div class="feature-content h-[404px]">
+              <div
+                class="flex h-[151px] w-[608px] flex-col items-start gap-[16px]"
+              >
+                <h2 id="features-title" class="feature-heading">
+                  Tích hợp mượt mà công cụ bạn đang dùng
+                </h2>
+                <p class="feature-desc h-[90px]">
+                  Mang lại trải nghiệm phục vụ nhanh chóng và chính xác mà không
+                  gặp rào cản kỹ thuật phức tạp. Tối ưu quy trình vận hành và
+                  cập nhật phòng tức thì.
+                </p>
+              </div>
+
+              <div class="flex h-[221px] w-[608px] flex-col items-start">
+                <div class="h-[1px] w-[608px] bg-line"></div>
+
+                <div
+                  class="flex h-[220px] w-[608px] flex-col items-start gap-[24px]"
+                >
+                  <ul class="feature-list h-[136px]">
+                    <li class="feature-item">
+                      <svg
+                        class="feature-item-icon"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span class="feature-item-text"
+                        >Đồng bộ OTA 2 chiều (Agoda, Booking, Traveloka)</span
+                      >
+                    </li>
+
+                    <li class="feature-item">
+                      <svg
+                        class="feature-item-icon"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span class="feature-item-text"
+                        >Quy trình check-in siêu tốc chỉ 30 giây</span
+                      >
+                    </li>
+
+                    <li class="feature-item">
+                      <svg
+                        class="feature-item-icon"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span class="feature-item-text"
+                        >Quản lý sơ đồ phòng & trạng thái dọn dẹp</span
+                      >
+                    </li>
+                  </ul>
+
+                  <p class="feature-desc h-[60px]">
+                    Kiểm soát toàn diện mọi hoạt động lễ tân, buồng phòng và
+                    thanh toán trên một màn hình duy nhất.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cột phải: Ảnh 1 -->
+            <figure class="feature-img-box">
+              <img
+                src="./assets/img/features-1.png"
+                alt="Bảng điều khiển và biểu đồ thống kê phòng"
+                class="feature-img"
+              />
+            </figure>
+          </div>
+
+          <!-- HÀNG 2: Ảnh trái - Text phải (Đảo vị trí) -->
+          <div class="feature-row h-[454px]">
+            <!-- Cột trái: Ảnh 2 -->
+            <figure class="feature-img-box-alt">
+              <img
+                src="./assets/img/features-2.png"
+                alt="Bản đồ phân bổ và biểu đồ doanh thu"
+                class="feature-img h-[434px]"
+              />
+            </figure>
+
+            <!-- Cột phải: Nội dung -->
+            <div class="feature-content h-[400px]">
+              <div
+                class="flex h-[151px] w-[608px] flex-col items-start gap-[16px]"
+              >
+                <h3 class="feature-heading">
+                  Đồng hành tối ưu hóa tiềm năng kinh doanh
+                </h3>
+                <p class="feature-desc h-[90px]">
+                  Mang đến hệ thống đối soát tài chính minh bạch, hỗ trợ tối đa
+                  việc gia tăng tỷ lệ lấp đầy phòng và quản lý chuỗi cơ sở dễ
+                  dàng.
+                </p>
+              </div>
+
+              <div class="flex h-[217px] w-[608px] flex-col items-start">
+                <div class="h-[1px] w-[608px] bg-line"></div>
+
+                <ul class="feature-list h-[216px]">
+                  <li class="feature-item">
+                    <svg
+                      class="feature-item-icon"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="feature-item-text"
+                      >Báo cáo doanh thu & công suất phòng trực quan</span
+                    >
+                  </li>
+
+                  <li class="feature-item">
+                    <svg
+                      class="feature-item-icon"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="feature-item-text"
+                      >Phân quyền chi tiết cho quản lý, lễ tân và thu ngân</span
+                    >
+                  </li>
+
+                  <li class="feature-item">
+                    <svg
+                      class="feature-item-icon"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="feature-item-text"
+                      >Quy trình chuyển giao ca trực tự động, chống thất
+                      thoát</span
+                    >
+                  </li>
+
+                  <li class="feature-item">
+                    <svg
+                      class="feature-item-icon"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="feature-item-text"
+                      >Tự động hóa giá phòng theo ngày lễ & mùa cao điểm</span
+                    >
+                  </li>
+
+                  <li class="feature-item">
+                    <svg
+                      class="feature-item-icon"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="feature-item-text"
+                      >Lưu trữ hồ sơ và lịch sử lưu trú của khách hàng</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
