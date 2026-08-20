@@ -34,6 +34,9 @@
 }
 
 @layer components {
+  /* ================================================================= */
+  /* 1. BUTTONS (Dùng chung cho toàn trang)                            */
+  /* ================================================================= */
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-card transition-all duration-200 cursor-pointer;
   }
@@ -46,31 +49,35 @@
   .btn-outline {
     @apply border border-line bg-surface text-ink hover:bg-brand-50 font-medium;
   }
-  /* Khung Section Features & Container */
+
+  /* ================================================================= */
+  /* 2. SECTION 1: BRANDS                                              */
+  /* ================================================================= */
+  .brand-logo-item {
+    @apply flex shrink-0 items-center justify-center text-muted transition-colors hover:text-ink;
+  }
+
+  /* ================================================================= */
+  /* 3. SECTION 2: FEATURES                                            */
+  /* ================================================================= */
   .feature-section {
     @apply flex w-full flex-col items-center bg-surface-subtle py-[96px] gap-[80px];
   }
   .feature-container {
     @apply mx-auto flex w-[1280px] flex-col items-center gap-[80px];
   }
-
-  /* Khung Row 2 cột */
   .feature-row {
     @apply flex w-[1280px] flex-row items-center justify-between gap-[64px];
   }
   .feature-content {
     @apply flex w-[608px] flex-col items-start gap-[32px];
   }
-
-  /* Typography tiêu đề & mô tả */
   .feature-heading {
     @apply font-display text-[36px] font-extrabold leading-[125%] tracking-[-0.01em] text-ink;
   }
   .feature-desc {
     @apply font-body text-[20px] font-normal leading-[150%] text-muted;
   }
-
-  /* Danh sách & Item checkmark tái sử dụng */
   .feature-list {
     @apply flex w-[608px] flex-col items-start gap-[16px] pt-[32px];
   }
@@ -83,8 +90,6 @@
   .feature-item-text {
     @apply w-[580px] font-body text-[16px] font-medium leading-[150%] text-ink;
   }
-
-  /* Khung hình ảnh */
   .feature-img-box {
     @apply flex h-[455px] w-[608px] items-center justify-center p-[10px];
   }
@@ -93,5 +98,221 @@
   }
   .feature-img {
     @apply h-[435px] w-[598px] object-contain;
+  }
+
+  /* ================================================================= */
+  /* 4. SECTION 5: SOCIAL PROOF / STATS                                */
+  /* ================================================================= */
+  .stat-card {
+    @apply flex w-[256px] flex-col items-start gap-[16px];
+  }
+  .stat-icon-box {
+    @apply flex h-[48px] w-[48px] shrink-0 items-center justify-center rounded-lg bg-brand-50 text-purple-600;
+  }
+  .stat-number {
+    @apply font-display text-[24px] font-bold leading-[125%] text-ink;
+  }
+  .stat-label {
+    @apply font-body text-[16px] font-light leading-[150%] text-muted;
+  }
+  .stat-link {
+    @apply flex h-[16px] w-[640px] items-center gap-[8px] font-body text-[16px] font-medium leading-[16px] text-purple-600 transition-colors hover:text-purple-700;
+  }
+  /* ================================================================= */
+  /* SECTION 6: TESTIMONIALS                                           */
+  /* ================================================================= */
+  .testimonial-section {
+    @apply flex w-full flex-col items-center bg-surface-subtle py-[96px];
+  }
+  .testimonial-container {
+    @apply mx-auto flex h-[234px] w-[1280px] flex-col items-center gap-[64px];
+  }
+  .testimonial-box {
+    @apply flex h-[234px] w-[1216px] flex-col items-center gap-[24px];
+  }
+  .testimonial-quote {
+    @apply h-[117px] w-[768px] text-center font-display text-[24px] font-semibold leading-[162.5%] text-ink;
+  }
+  .testimonial-author {
+    @apply flex h-[24px] w-[1216px] items-center justify-center gap-[14px];
+  }
+  .testimonial-avatar {
+    @apply h-[24px] w-[24px] rounded-full object-cover;
+  }
+  .testimonial-name {
+    @apply font-body text-[16px] font-semibold leading-[125%] text-ink;
+  }
+  .testimonial-role {
+    @apply font-body text-[14px] font-normal leading-[125%] text-muted not-italic;
+  }
+
+  /* ================================================================= */
+  /* SECTION 7: PRICING COMPONENTS                                     */
+  /* ================================================================= */
+  .pricing-section {
+    @apply flex w-full flex-col items-center bg-surface py-[96px];
+  }
+  .pricing-container {
+    @apply mx-auto flex w-[1280px] flex-col items-center gap-[48px];
+  }
+  .pricing-header-box {
+    @apply flex h-[121px] w-[1280px] flex-col items-center gap-[16px];
+  }
+  .pricing-heading {
+    @apply font-display text-[36px] font-extrabold leading-[125%] tracking-[-0.01em] text-ink text-center;
+  }
+  .pricing-desc {
+    @apply h-[60px] w-[768px] font-body text-[20px] font-normal leading-[150%] text-muted text-center;
+  }
+
+  /* Khung thẻ bảng giá (lặp lại 3 lần) */
+  .pricing-grid {
+    @apply flex h-[559px] w-[1280px] flex-row items-center gap-[40px];
+  }
+  .pricing-card {
+    @apply flex h-[559px] w-[400px] flex-1 flex-col items-center rounded-card border border-line bg-surface p-[32px] shadow-sm transition-all hover:shadow-md;
+  }
+  .pricing-card-featured {
+    @apply relative flex h-[559px] w-[400px] flex-1 flex-col items-center rounded-card border-2 border-brand-600 bg-surface p-[32px] shadow-md;
+  }
+  .pricing-card-content {
+    @apply flex h-[495px] w-[336px] flex-col items-center gap-[32px];
+  }
+  .pricing-card-header {
+    @apply flex h-[106px] w-[336px] flex-col items-center gap-[16px];
+  }
+  .pricing-plan-title {
+    @apply font-display text-[24px] font-semibold leading-[150%] text-ink text-center;
+  }
+  .pricing-plan-desc {
+    @apply h-[54px] w-[336px] font-body text-[18px] font-normal leading-[150%] text-muted text-center;
+  }
+  .pricing-price-box {
+    @apply flex h-[48px] items-end gap-[10px];
+  }
+  .pricing-price-num {
+    @apply font-display text-[48px] font-extrabold leading-[48px] text-ink;
+  }
+  .pricing-price-unit {
+    @apply font-body text-[18px] font-medium leading-[150%] text-muted;
+  }
+
+  /* Dòng tính năng (lặp lại 15 lần) */
+  .pricing-feature-list {
+    @apply flex h-[204px] w-[336px] flex-col items-start gap-[16px];
+  }
+  .pricing-feature-item {
+    @apply flex h-[28px] w-[336px] items-center gap-[10px];
+  }
+  .pricing-feature-icon {
+    @apply h-[20px] w-[20px] shrink-0 text-brand-600;
+  }
+  .pricing-feature-text {
+    @apply w-[306px] font-body text-[16px] font-normal leading-[150%] text-ink;
+  }
+  /* ================================================================= */
+  /* SECTION 8: FAQ ACCORDION                                          */
+  /* ================================================================= */
+  .faq-section {
+    @apply flex w-full flex-col items-center bg-surface pb-[96px];
+  }
+  .faq-container {
+    @apply mx-auto flex h-[517px] w-[1280px] flex-col items-center gap-[32px];
+  }
+  .faq-heading-box {
+    @apply flex h-[45px] w-[1360px] flex-col items-center;
+  }
+  .faq-heading {
+    @apply flex h-[45px] w-[1360px] items-center justify-center text-center font-display text-[36px] font-extrabold leading-[125%] tracking-[-0.01em] text-ink;
+  }
+  .faq-accordion {
+    @apply flex h-[440px] w-[695px] flex-col items-start;
+  }
+  .faq-btn {
+    @apply flex w-[695px] flex-col items-start;
+  }
+  .faq-header {
+    @apply flex h-[66px] w-[695px] flex-row items-center py-[24px];
+  }
+  .faq-title-active {
+    @apply w-[679px] font-body text-[18px] font-medium leading-[18px] text-ink;
+  }
+  .faq-title-inactive {
+    @apply w-[679px] font-body text-[18px] font-medium leading-[18px] text-muted;
+  }
+  .faq-icon-active {
+    @apply h-[16px] w-[16px] shrink-0 text-brand-600;
+  }
+  .faq-icon-inactive {
+    @apply h-[16px] w-[16px] shrink-0 text-muted;
+  }
+  .faq-divider {
+    @apply h-[1px] w-[694px] bg-line;
+  }
+  .faq-body {
+    @apply flex w-[695px] flex-col items-start py-[20px];
+  }
+  .faq-body-content {
+    @apply flex h-[132px] w-[655px] flex-col items-start gap-[6px];
+  }
+  .faq-body-text {
+    @apply font-body text-[16px] font-normal leading-[150%] text-muted;
+  }
+  /* ================================================================= */
+  /* SECTION 9: CTA                                                    */
+  /* ================================================================= */
+  .cta-section {
+    @apply flex w-full flex-col items-center bg-surface-subtle py-[96px];
+  }
+  .cta-container {
+    @apply mx-auto flex h-[171px] w-[1280px] items-center justify-center;
+  }
+  .cta-content {
+    @apply flex h-[171px] w-[640px] flex-col items-center gap-[24px];
+  }
+  .cta-heading {
+    @apply flex h-[45px] w-[640px] items-center justify-center text-center font-display text-[36px] font-extrabold leading-[125%] tracking-[-0.01em] text-ink;
+  }
+  .cta-desc {
+    @apply h-[30px] w-[640px] text-center font-body text-[20px] font-normal leading-[150%] text-muted;
+  }
+  .cta-btn {
+    @apply inline-flex items-center justify-center rounded-card bg-accent-500 text-white hover:bg-accent-400 font-semibold shadow-sm h-[48px] w-[199px] px-[20px] py-[12px] font-body text-[16px] leading-[150%] transition-all duration-200 cursor-pointer;
+  }
+  /* ================================================================= */
+  /* SECTION 10: FOOTER                                                */
+  /* ================================================================= */
+  .footer-section {
+    @apply flex w-full flex-col items-center bg-surface border-t border-line;
+  }
+  .footer-container {
+    @apply mx-auto flex h-[537px] w-[1280px] flex-col items-center py-[64px] gap-[64px];
+  }
+  .footer-nav-grid {
+    @apply flex h-[221px] w-[1280px] flex-row justify-between items-start gap-[32px];
+  }
+  .footer-col {
+    @apply flex w-[176px] flex-col items-start gap-[16px];
+  }
+  .footer-heading {
+    @apply h-[21px] w-[176px] font-display text-[14px] font-semibold uppercase leading-[150%] text-ink;
+  }
+  .footer-links {
+    @apply flex w-[176px] flex-col items-start gap-[16px] font-body text-[16px] leading-[150%] text-muted;
+  }
+  .footer-link-item {
+    @apply h-[24px] transition-colors hover:text-brand-600;
+  }
+  .footer-bottom-box {
+    @apply flex h-[124px] w-[384px] flex-col items-center gap-[20px];
+  }
+  .footer-copy {
+    @apply h-[24px] w-[384px] text-center font-body text-[16px] font-normal leading-[150%] text-muted;
+  }
+  .footer-social-box {
+    @apply flex h-[24px] w-[156px] flex-row items-center justify-center gap-[20px] text-muted;
+  }
+  .footer-social-icon {
+    @apply h-[24px] w-[24px] shrink-0 transition-colors hover:text-ink;
   }
 }
