@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
 
-  <body class="bg-surface font-body text-ink antialiased">
+  <body
+    class="bg-surface font-body text-ink antialiased dark:bg-surface-dark dark:text-ink-invert"
+  >
     <!-- Accessibility Link -->
     <a
       href="#main-content"
@@ -29,9 +31,11 @@
     <!-- ================================================================= -->
     <!-- HEADER / NAVBAR                                                   -->
     <!-- ================================================================= -->
-    <header class="w-full border-b border-line bg-surface">
+    <header
+      class="w-full border-b border-line bg-surface dark:border-line-invert dark:bg-surface-dark"
+    >
       <nav
-        class="mx-auto flex h-[85px] w-[1280px] items-center justify-between py-[24px]"
+        class="section-container flex h-20 lg:h-[85px] items-center justify-between py-4 lg:py-[24px]"
         aria-label="Điều hướng chính"
       >
         <div class="flex items-center gap-[32px]">
@@ -54,18 +58,18 @@
             </svg>
 
             <span
-              class="font-display text-[24px] font-semibold leading-[150%] tracking-tight text-ink"
+              class="font-display text-[24px] font-semibold leading-[150%] tracking-tight text-ink dark:text-ink-invert"
             >
               ResiStay
             </span>
           </a>
 
-          <!-- Menu Links -->
-          <ul class="flex items-center gap-[32px]">
+          <!-- Menu Links (Ẩn mobile, hiện từ lg) -->
+          <ul class="hidden items-center gap-[32px] lg:flex">
             <li>
               <a
                 href="#hero"
-                class="font-body text-[16px] font-medium leading-[150%] tracking-tight text-ink transition-colors hover:text-brand-600"
+                class="font-body text-[16px] font-medium leading-[150%] tracking-tight text-brand-600 dark:text-brand-100 transition-colors"
               >
                 Trang chủ
               </a>
@@ -74,7 +78,7 @@
             <li>
               <a
                 href="#features"
-                class="font-body text-[16px] font-medium leading-[150%] tracking-tight text-ink transition-colors hover:text-brand-600"
+                class="font-body text-[16px] font-medium leading-[150%] tracking-tight text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-ink-invert transition-colors"
               >
                 Tính năng
               </a>
@@ -82,17 +86,17 @@
 
             <li>
               <a
-                href="#brands"
-                class="font-body text-[16px] font-medium leading-[150%] tracking-tight text-ink transition-colors hover:text-brand-600"
+                href="pricing.html"
+                class="font-body text-[16px] font-medium leading-[150%] tracking-tight text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-ink-invert transition-colors"
               >
-                Đối tác
+                Bảng giá
               </a>
             </li>
 
             <li>
               <a
                 href="#testimonials"
-                class="font-body text-[16px] font-medium leading-[150%] tracking-tight text-ink transition-colors hover:text-brand-600"
+                class="font-body text-[16px] font-medium leading-[150%] tracking-tight text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-ink-invert transition-colors"
               >
                 Đánh giá
               </a>
@@ -100,8 +104,8 @@
 
             <li>
               <a
-                href="#faq"
-                class="font-body text-[16px] font-medium leading-[150%] tracking-tight text-ink transition-colors hover:text-brand-600"
+                href="contact.html"
+                class="font-body text-[16px] font-medium leading-[150%] tracking-tight text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-ink-invert transition-colors"
               >
                 Liên hệ
               </a>
@@ -109,20 +113,41 @@
           </ul>
         </div>
 
-        <div class="flex items-center gap-[16px]">
+        <div class="flex items-center gap-3 sm:gap-[16px]">
           <a
-            href="#login"
-            class="font-body text-[14px] font-medium leading-[150%] tracking-tight text-ink transition-colors hover:text-brand-600"
+            href="contact.html"
+            class="hidden sm:inline-flex font-body text-[14px] font-medium leading-[150%] tracking-tight text-muted hover:text-ink dark:text-muted-invert dark:hover:text-ink-invert transition-colors"
           >
             Đăng nhập
           </a>
 
           <a
-            href="#cta"
-            class="btn btn-primary px-[12px] py-[8px] font-body text-[14px] font-medium leading-[150%] tracking-tight"
+            href="contact.html"
+            class="btn-primary px-[12px] py-[8px] text-[14px] leading-[150%] tracking-tight"
           >
             Dùng thử miễn phí
           </a>
+
+          <!-- Nút Hamburger Mobile -->
+          <button
+            type="button"
+            class="inline-flex items-center justify-center rounded-card p-2 text-muted hover:bg-surface-subtle hover:text-ink focus:outline-none lg:hidden dark:text-muted-invert dark:hover:bg-surface-dark-alt"
+            aria-label="Mở menu điều hướng"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
       </nav>
     </header>
@@ -133,51 +158,59 @@
       <!-- ================================================================= -->
       <section
         id="hero"
-        class="w-full bg-surface py-[64px]"
+        class="w-full bg-surface py-[64px] dark:bg-surface-dark"
         aria-labelledby="hero-title"
       >
         <div
-          class="mx-auto flex h-[416px] w-[1280px] items-center justify-between gap-[96px]"
+          class="section-container flex flex-col lg:flex-row lg:h-[416px] items-center justify-between gap-10 lg:gap-[96px]"
         >
-          <div class="flex w-[736px] flex-col items-start gap-[40px]">
-            <div class="flex w-[736px] flex-col items-start gap-[24px]">
+          <div
+            class="flex w-full lg:w-[736px] flex-col items-start gap-8 lg:gap-[40px]"
+          >
+            <div
+              class="flex w-full lg:w-[736px] flex-col items-start gap-4 lg:gap-[24px]"
+            >
               <h1
                 id="hero-title"
-                class="font-display text-[52px] font-extrabold leading-[56px] -tracking-[0.03em] text-ink"
+                class="font-display text-3xl sm:text-4xl lg:text-[52px] font-extrabold leading-tight lg:leading-[56px] -tracking-[0.03em] text-ink dark:text-ink-invert"
               >
                 Giải pháp quản lý
                 <br />
                 khách sạn toàn diện.
               </h1>
 
-              <p class="font-body text-[18px] leading-[150%] text-muted">
+              <p
+                class="font-body text-base sm:text-lg lg:text-[18px] leading-[150%] text-muted dark:text-muted-invert"
+              >
                 Tối ưu quy trình vận hành, tự động đồng bộ phòng trên mọi kênh
                 OTA và nâng tầm trải nghiệm của khách lưu trú.
               </p>
             </div>
 
-            <div class="flex items-center gap-[16px]">
+            <div
+              class="flex flex-wrap items-center gap-[16px] w-full sm:w-auto"
+            >
               <a
-                href="#cta"
-                class="btn btn-primary h-[48px] px-[20px] py-[12px] font-body text-[16px] font-medium leading-[150%] whitespace-nowrap"
+                href="contact.html"
+                class="btn-primary w-full sm:w-auto h-[48px] px-[20px] py-[12px] text-[16px] leading-[150%] whitespace-nowrap"
               >
                 Bắt đầu dùng thử
               </a>
 
               <a
                 href="#features"
-                class="btn btn-outline h-[48px] px-[20px] py-[12px] font-body text-[16px] font-medium leading-[150%] whitespace-nowrap"
+                class="btn-outline w-full sm:w-auto h-[48px] px-[20px] py-[12px] text-[16px] leading-[150%] whitespace-nowrap"
               >
                 Xem tính năng
               </a>
             </div>
           </div>
 
-          <figure class="flex items-center justify-between">
+          <figure class="flex items-center justify-center w-full lg:w-auto">
             <img
               src="./assets/img/hero-hotel.png"
               alt="Giao diện phần mềm quản lý khách sạn ResiStay"
-              class="h-[416px] w-[532px] object-contain"
+              class="h-auto max-h-[416px] w-full max-w-[532px] object-contain"
             />
           </figure>
         </div>
@@ -188,61 +221,71 @@
       <!-- ================================================================= -->
       <section
         id="brands"
-        class="w-full bg-surface pb-[96px]"
+        class="w-full bg-surface pb-[96px] dark:bg-surface-dark"
         aria-labelledby="brands-title"
       >
-        <div
-          class="mx-auto flex h-[55px] w-[1280px] items-center justify-between"
-        >
+        <div class="section-container">
           <h2 id="brands-title" class="sr-only">
             Đối tác kênh bán & khách sạn liên kết
           </h2>
 
-          <ul class="flex h-[55px] w-[1280px] items-center justify-between">
+          <ul
+            class="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:h-[55px] items-center justify-between gap-6 lg:gap-0 text-muted dark:text-muted-invert"
+          >
             <!-- 1. Booking.com -->
-            <li class="brand-logo-item h-[41.76px] w-[128px]">
+            <li
+              class="flex shrink-0 items-center justify-center h-[41.76px] lg:w-[128px] hover:text-ink dark:hover:text-ink-invert transition-colors"
+            >
               <span
                 class="font-display text-[22px] font-extrabold tracking-tight"
+                >Booking.com</span
               >
-                Booking.com
-              </span>
             </li>
 
             <!-- 2. Agoda -->
-            <li class="brand-logo-item h-[32.81px] w-[150px]">
-              <span class="font-display text-[24px] font-bold tracking-tight">
-                agoda
-              </span>
+            <li
+              class="flex shrink-0 items-center justify-center h-[32.81px] lg:w-[150px] hover:text-ink dark:hover:text-ink-invert transition-colors"
+            >
+              <span class="font-display text-[24px] font-bold tracking-tight"
+                >agoda</span
+              >
             </li>
 
             <!-- 3. Traveloka -->
-            <li class="brand-logo-item h-[39.99px] w-[128px]">
-              <span class="font-display text-[22px] font-bold tracking-tight">
-                traveloka
-              </span>
+            <li
+              class="flex shrink-0 items-center justify-center h-[39.99px] lg:w-[128px] hover:text-ink dark:hover:text-ink-invert transition-colors"
+            >
+              <span class="font-display text-[22px] font-bold tracking-tight"
+                >traveloka</span
+              >
             </li>
 
             <!-- 4. Airbnb -->
-            <li class="brand-logo-item h-[37.23px] w-[136px]">
-              <span class="font-display text-[23px] font-bold tracking-tight">
-                airbnb
-              </span>
+            <li
+              class="flex shrink-0 items-center justify-center h-[37.23px] lg:w-[136px] hover:text-ink dark:hover:text-ink-invert transition-colors"
+            >
+              <span class="font-display text-[23px] font-bold tracking-tight"
+                >airbnb</span
+              >
             </li>
 
             <!-- 5. TripAdvisor -->
-            <li class="brand-logo-item h-[55px] w-[110px]">
-              <span class="font-display text-[21px] font-bold tracking-tight">
-                Tripadvisor
-              </span>
+            <li
+              class="flex shrink-0 items-center justify-center h-[55px] lg:w-[110px] hover:text-ink dark:hover:text-ink-invert transition-colors"
+            >
+              <span class="font-display text-[21px] font-bold tracking-tight"
+                >Tripadvisor</span
+              >
             </li>
 
             <!-- 6. Marriott -->
-            <li class="brand-logo-item h-[27.58px] w-[132px]">
+            <li
+              class="flex shrink-0 items-center justify-center h-[27.58px] lg:w-[132px] hover:text-ink dark:hover:text-ink-invert transition-colors"
+            >
               <span
                 class="font-display text-[21px] font-extrabold tracking-wider"
+                >MARRIOTT</span
               >
-                MARRIOTT
-              </span>
             </li>
           </ul>
         </div>
@@ -253,37 +296,52 @@
       <!-- ================================================================= -->
       <section
         id="features"
-        class="feature-section"
+        class="w-full bg-surface-subtle py-[96px] dark:bg-surface-subtle-dark"
         aria-labelledby="features-title"
       >
-        <div class="feature-container">
+        <div
+          class="section-container flex flex-col items-center gap-16 lg:gap-[80px]"
+        >
           <!-- HÀNG 1: Text trái - Ảnh phải -->
-          <div class="feature-row h-[455px]">
+          <div
+            class="flex w-full flex-col lg:flex-row lg:h-[455px] items-center justify-between gap-10 lg:gap-[64px]"
+          >
             <!-- Cột trái -->
-            <div class="feature-content h-[404px]">
+            <div
+              class="flex w-full lg:w-[608px] flex-col items-start gap-6 lg:gap-[32px] lg:h-[404px]"
+            >
               <div
-                class="flex h-[151px] w-[608px] flex-col items-start gap-[16px]"
+                class="flex w-full lg:w-[608px] flex-col items-start gap-[16px]"
               >
-                <h2 id="features-title" class="feature-heading">
+                <h2
+                  id="features-title"
+                  class="font-display text-2xl sm:text-3xl lg:text-[36px] font-extrabold leading-[125%] tracking-[-0.01em] text-ink dark:text-ink-invert"
+                >
                   Tích hợp mượt mà công cụ bạn đang dùng
                 </h2>
-                <p class="feature-desc h-[90px]">
+                <p
+                  class="font-body text-base sm:text-lg lg:text-[20px] font-normal leading-[150%] text-muted dark:text-muted-invert lg:h-[90px]"
+                >
                   Mang lại trải nghiệm phục vụ nhanh chóng và chính xác mà không
                   gặp rào cản kỹ thuật phức tạp. Tối ưu quy trình vận hành và
                   cập nhật phòng tức thì.
                 </p>
               </div>
 
-              <div class="flex h-[221px] w-[608px] flex-col items-start">
-                <div class="h-[1px] w-[608px] bg-line"></div>
+              <div class="flex w-full lg:w-[608px] flex-col items-start">
+                <div
+                  class="h-[1px] w-full lg:w-[608px] bg-line dark:bg-line-invert"
+                ></div>
 
                 <div
-                  class="flex h-[220px] w-[608px] flex-col items-start gap-[24px]"
+                  class="flex w-full lg:w-[608px] flex-col items-start gap-[24px]"
                 >
-                  <ul class="feature-list h-[136px]">
-                    <li class="feature-item">
+                  <ul
+                    class="flex w-full lg:w-[608px] flex-col items-start gap-[16px] pt-[24px] lg:pt-[32px]"
+                  >
+                    <li class="flex w-full lg:w-[608px] items-center gap-[8px]">
                       <svg
-                        class="h-[20px] w-[20px] shrink-0 text-brand-600"
+                        class="h-[20px] w-[20px] shrink-0 text-brand-600 dark:text-brand-100"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                         aria-hidden="true"
@@ -294,14 +352,16 @@
                           clip-rule="evenodd"
                         />
                       </svg>
-                      <span class="feature-item-text">
+                      <span
+                        class="font-body text-sm sm:text-base lg:text-[16px] font-medium leading-[150%] text-ink dark:text-ink-invert"
+                      >
                         Đồng bộ OTA 2 chiều (Agoda, Booking, Traveloka)
                       </span>
                     </li>
 
-                    <li class="feature-item">
+                    <li class="flex w-full lg:w-[608px] items-center gap-[8px]">
                       <svg
-                        class="h-[20px] w-[20px] shrink-0 text-brand-600"
+                        class="h-[20px] w-[20px] shrink-0 text-brand-600 dark:text-brand-100"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                         aria-hidden="true"
@@ -312,14 +372,16 @@
                           clip-rule="evenodd"
                         />
                       </svg>
-                      <span class="feature-item-text">
+                      <span
+                        class="font-body text-sm sm:text-base lg:text-[16px] font-medium leading-[150%] text-ink dark:text-ink-invert"
+                      >
                         Quy trình check-in siêu tốc chỉ 30 giây
                       </span>
                     </li>
 
-                    <li class="feature-item">
+                    <li class="flex w-full lg:w-[608px] items-center gap-[8px]">
                       <svg
-                        class="h-[20px] w-[20px] shrink-0 text-brand-600"
+                        class="h-[20px] w-[20px] shrink-0 text-brand-600 dark:text-brand-100"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                         aria-hidden="true"
@@ -330,13 +392,17 @@
                           clip-rule="evenodd"
                         />
                       </svg>
-                      <span class="feature-item-text">
+                      <span
+                        class="font-body text-sm sm:text-base lg:text-[16px] font-medium leading-[150%] text-ink dark:text-ink-invert"
+                      >
                         Quản lý sơ đồ phòng & trạng thái dọn dẹp
                       </span>
                     </li>
                   </ul>
 
-                  <p class="feature-desc h-[60px]">
+                  <p
+                    class="font-body text-sm sm:text-base lg:text-[20px] font-normal leading-[150%] text-muted dark:text-muted-invert mt-4"
+                  >
                     Kiểm soát toàn diện mọi hoạt động lễ tân, buồng phòng và
                     thanh toán trên một màn hình duy nhất.
                   </p>
@@ -345,48 +411,64 @@
             </div>
 
             <!-- Cột phải: Ảnh 1 -->
-            <figure class="feature-img-box">
+            <figure
+              class="flex w-full lg:w-[608px] lg:h-[455px] items-center justify-center p-[10px]"
+            >
               <img
                 src="./assets/img/features-1.png"
                 alt="Biểu đồ thống kê buồng phòng"
-                class="feature-img"
+                class="h-auto max-h-[435px] w-full max-w-[598px] object-contain"
               />
             </figure>
           </div>
 
-          <!-- HÀNG 2: Ảnh trái - Text phải (Đảo vị trí) -->
-          <div class="feature-row h-[454px]">
+          <!-- HÀNG 2: Ảnh trái - Text phải (Đảo vị trí trên lg) -->
+          <div
+            class="flex w-full flex-col lg:flex-row lg:h-[454px] items-center justify-between gap-10 lg:gap-[64px]"
+          >
             <!-- Cột trái: Ảnh 2 -->
-            <figure class="feature-img-box-alt">
+            <figure
+              class="flex w-full lg:w-[608px] lg:h-[454px] items-center justify-center p-[10px] order-2 lg:order-1"
+            >
               <img
                 src="./assets/img/features-2.png"
                 alt="Bản đồ phân bổ nguồn khách và doanh thu"
-                class="feature-img h-[434px]"
+                class="h-auto max-h-[434px] w-full max-w-[598px] object-contain"
               />
             </figure>
 
             <!-- Cột phải: Nội dung -->
-            <div class="feature-content h-[400px]">
+            <div
+              class="flex w-full lg:w-[608px] flex-col items-start gap-6 lg:gap-[32px] lg:h-[400px] order-1 lg:order-2"
+            >
               <div
-                class="flex h-[151px] w-[608px] flex-col items-start gap-[16px]"
+                class="flex w-full lg:w-[608px] flex-col items-start gap-[16px]"
               >
-                <h3 class="feature-heading">
+                <h3
+                  class="font-display text-2xl sm:text-3xl lg:text-[36px] font-extrabold leading-[125%] tracking-[-0.01em] text-ink dark:text-ink-invert"
+                >
                   Đồng hành tối ưu hóa tiềm năng kinh doanh
                 </h3>
-                <p class="feature-desc h-[90px]">
+                <p
+                  class="font-body text-base sm:text-lg lg:text-[20px] font-normal leading-[150%] text-muted dark:text-muted-invert lg:h-[90px]"
+                >
                   Mang đến hệ thống đối soát tài chính minh bạch, hỗ trợ tối đa
                   việc gia tăng tỷ lệ lấp đầy phòng và quản lý chuỗi cơ sở dễ
                   dàng.
                 </p>
               </div>
 
-              <div class="flex h-[217px] w-[608px] flex-col items-start">
-                <div class="h-[1px] w-[608px] bg-line"></div>
+              <div class="flex w-full lg:w-[608px] flex-col items-start">
+                <div
+                  class="h-[1px] w-full lg:w-[608px] bg-line dark:bg-line-invert"
+                ></div>
 
-                <ul class="feature-list h-[216px]">
-                  <li class="feature-item">
+                <ul
+                  class="flex w-full lg:w-[608px] flex-col items-start gap-[16px] pt-[24px] lg:pt-[32px]"
+                >
+                  <li class="flex w-full lg:w-[608px] items-center gap-[8px]">
                     <svg
-                      class="h-[20px] w-[20px] shrink-0 text-brand-600"
+                      class="h-[20px] w-[20px] shrink-0 text-brand-600 dark:text-brand-100"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden="true"
@@ -397,14 +479,16 @@
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span class="feature-item-text">
+                    <span
+                      class="font-body text-sm sm:text-base lg:text-[16px] font-medium leading-[150%] text-ink dark:text-ink-invert"
+                    >
                       Báo cáo doanh thu & công suất phòng trực quan
                     </span>
                   </li>
 
-                  <li class="feature-item">
+                  <li class="flex w-full lg:w-[608px] items-center gap-[8px]">
                     <svg
-                      class="h-[20px] w-[20px] shrink-0 text-brand-600"
+                      class="h-[20px] w-[20px] shrink-0 text-brand-600 dark:text-brand-100"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden="true"
@@ -415,14 +499,16 @@
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span class="feature-item-text">
+                    <span
+                      class="font-body text-sm sm:text-base lg:text-[16px] font-medium leading-[150%] text-ink dark:text-ink-invert"
+                    >
                       Phân quyền chi tiết cho quản lý, lễ tân và thu ngân
                     </span>
                   </li>
 
-                  <li class="feature-item">
+                  <li class="flex w-full lg:w-[608px] items-center gap-[8px]">
                     <svg
-                      class="h-[20px] w-[20px] shrink-0 text-brand-600"
+                      class="h-[20px] w-[20px] shrink-0 text-brand-600 dark:text-brand-100"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden="true"
@@ -433,14 +519,16 @@
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span class="feature-item-text">
+                    <span
+                      class="font-body text-sm sm:text-base lg:text-[16px] font-medium leading-[150%] text-ink dark:text-ink-invert"
+                    >
                       Quy trình chuyển giao ca trực tự động, chống thất thoát
                     </span>
                   </li>
 
-                  <li class="feature-item">
+                  <li class="flex w-full lg:w-[608px] items-center gap-[8px]">
                     <svg
-                      class="h-[20px] w-[20px] shrink-0 text-brand-600"
+                      class="h-[20px] w-[20px] shrink-0 text-brand-600 dark:text-brand-100"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden="true"
@@ -451,14 +539,16 @@
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span class="feature-item-text">
+                    <span
+                      class="font-body text-sm sm:text-base lg:text-[16px] font-medium leading-[150%] text-ink dark:text-ink-invert"
+                    >
                       Tự động hóa giá phòng theo ngày lễ & mùa cao điểm
                     </span>
                   </li>
 
-                  <li class="feature-item">
+                  <li class="flex w-full lg:w-[608px] items-center gap-[8px]">
                     <svg
-                      class="h-[20px] w-[20px] shrink-0 text-brand-600"
+                      class="h-[20px] w-[20px] shrink-0 text-brand-600 dark:text-brand-100"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden="true"
@@ -469,7 +559,9 @@
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span class="feature-item-text">
+                    <span
+                      class="font-body text-sm sm:text-base lg:text-[16px] font-medium leading-[150%] text-ink dark:text-ink-invert"
+                    >
                       Lưu trữ hồ sơ và lịch sử lưu trú của khách hàng
                     </span>
                   </li>
@@ -485,33 +577,34 @@
       <!-- ================================================================= -->
       <section
         id="social-proof"
-        class="w-full bg-surface py-[96px]"
+        class="w-full bg-surface py-[96px] dark:bg-surface-dark"
         aria-labelledby="social-proof-title"
       >
-        <div class="mx-auto flex h-[332px] w-[1280px] items-center gap-[96px]">
-          <!-- Cột trái: Left content (w: 640px, h: 292px) -->
-          <div class="flex h-[292px] w-[640px] flex-col items-start gap-[24px]">
-            <!-- Khối Text -->
+        <div
+          class="section-container flex flex-col lg:flex-row lg:h-[332px] items-center gap-12 lg:gap-[96px]"
+        >
+          <!-- Cột trái: Left content -->
+          <div class="flex w-full lg:w-[640px] flex-col items-start gap-[24px]">
             <div
-              class="flex h-[196px] w-[640px] flex-col items-start gap-[12px]"
+              class="flex w-full lg:w-[640px] flex-col items-start gap-[12px]"
             >
               <span
-                class="font-body text-[18px] font-medium leading-[18px] text-brand-600"
+                class="font-body text-[18px] font-medium leading-[18px] text-brand-600 dark:text-brand-100"
               >
                 Hiệu quả vượt trội
               </span>
 
               <div
-                class="flex h-[166px] w-[640px] flex-col items-start gap-[16px]"
+                class="flex w-full lg:w-[640px] flex-col items-start gap-[16px]"
               >
                 <h2
                   id="social-proof-title"
-                  class="font-display text-[36px] font-extrabold leading-[125%] tracking-[-0.01em] text-ink"
+                  class="font-display text-2xl sm:text-3xl lg:text-[36px] font-extrabold leading-[125%] tracking-[-0.01em] text-ink dark:text-ink-invert"
                 >
                   Được tin cậy bởi hơn 1,200+ khách sạn & khu nghỉ dưỡng
                 </h2>
                 <p
-                  class="font-body text-[20px] font-light leading-[150%] text-muted"
+                  class="font-body text-base sm:text-lg lg:text-[20px] font-light leading-[150%] text-muted dark:text-muted-invert"
                 >
                   Giải phóng thời gian vận hành lễ tân, giảm 99% rủi ro
                   overbooking và nâng cao trải nghiệm khách lưu trú.
@@ -519,22 +612,23 @@
               </div>
             </div>
 
-            <!-- Khối Bottom -->
             <div
-              class="flex h-[72px] w-[640px] flex-col items-start gap-[24px]"
+              class="flex w-full lg:w-[640px] flex-col items-start gap-[24px]"
             >
-              <div class="h-[1px] w-[640px] bg-line"></div>
+              <div
+                class="h-[1px] w-full lg:w-[640px] bg-line dark:bg-line-invert"
+              ></div>
 
               <div
-                class="flex h-[48px] w-[640px] flex-col items-start gap-[16px]"
+                class="flex w-full lg:w-[640px] flex-col items-start gap-[16px]"
               >
                 <a
                   href="#features"
-                  class="stat-link text-brand-600 hover:text-brand-700"
+                  class="flex items-center gap-[8px] font-body text-[16px] font-medium leading-[16px] text-brand-600 hover:text-brand-700 dark:text-brand-100 transition-colors"
                 >
                   <span>Khám phá tính năng chi tiết</span>
                   <svg
-                    class="h-[16px] w-[16px] shrink-0 text-brand-600"
+                    class="h-[16px] w-[16px] shrink-0 text-brand-600 dark:text-brand-100"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -550,12 +644,12 @@
                 </a>
 
                 <a
-                  href="#pricing"
-                  class="stat-link text-brand-600 hover:text-brand-700"
+                  href="pricing.html"
+                  class="flex items-center gap-[8px] font-body text-[16px] font-medium leading-[16px] text-brand-600 hover:text-brand-700 dark:text-brand-100 transition-colors"
                 >
                   <span>Xem các gói dịch vụ</span>
                   <svg
-                    class="h-[16px] w-[16px] shrink-0 text-brand-600"
+                    class="h-[16px] w-[16px] shrink-0 text-brand-600 dark:text-brand-100"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -573,149 +667,163 @@
             </div>
           </div>
 
-          <!-- Cột phải: Stats (w: 544px, h: 332px) -->
-          <dl class="flex h-[332px] w-[544px] flex-col items-start gap-[32px]">
-            <!-- Row 1 -->
-            <div class="flex h-[150px] w-[544px] items-start gap-[32px]">
-              <!-- Stat 1: Cơ sở -->
-              <div class="stat-card h-[150px]">
-                <div class="stat-icon-box bg-brand-50 text-brand-600">
-                  <svg
-                    class="h-[28px] w-[28px]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                    />
-                  </svg>
-                </div>
-
-                <div
-                  class="flex h-[86px] w-[256px] flex-col items-start gap-[8px]"
+          <!-- Cột phải: Stats -->
+          <dl
+            class="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full lg:w-[544px] lg:h-[332px]"
+          >
+            <!-- Stat 1 -->
+            <div class="card-box flex flex-col items-start gap-[16px] p-6">
+              <div
+                class="inline-flex h-[48px] w-[48px] items-center justify-center rounded-lg bg-brand-50 text-brand-600 dark:bg-brand-700/30 dark:text-brand-100"
+              >
+                <svg
+                  class="h-[28px] w-[28px]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
                 >
-                  <dd class="stat-number">1,200+ Cơ sở</dd>
-                  <dt class="stat-label">
-                    Khách sạn & Resort tin dùng vận hành hằng ngày.
-                  </dt>
-                </div>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  />
+                </svg>
               </div>
-
-              <!-- Stat 2: Khách -->
-              <div class="stat-card h-[150px]">
-                <div class="stat-icon-box bg-brand-50 text-brand-600">
-                  <svg
-                    class="h-[28px] w-[28px]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-                    />
-                  </svg>
-                </div>
-
-                <div
-                  class="flex h-[86px] w-[256px] flex-col items-start gap-[8px]"
+              <div>
+                <dd
+                  class="font-display text-[24px] font-bold leading-[125%] text-ink dark:text-ink-invert"
                 >
-                  <dd class="stat-number">450,000+ Khách</dd>
-                  <dt class="stat-label">
-                    Lượt đặt phòng và check-in xử lý thành công mỗi tháng.
-                  </dt>
-                </div>
+                  1,200+ Cơ sở
+                </dd>
+                <dt
+                  class="font-body text-[16px] font-light leading-[150%] text-muted dark:text-muted-invert mt-1"
+                >
+                  Khách sạn & Resort tin dùng vận hành hằng ngày.
+                </dt>
               </div>
             </div>
 
-            <!-- Row 2 -->
-            <div class="flex h-[150px] w-[544px] items-start gap-[32px]">
-              <!-- Stat 3: Tốc độ -->
-              <div class="stat-card h-[126px]">
-                <div class="stat-icon-box bg-brand-50 text-brand-600">
-                  <svg
-                    class="h-[28px] w-[28px]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                </div>
-
-                <div
-                  class="flex h-[62px] w-[256px] flex-col items-start gap-[8px]"
+            <!-- Stat 2 -->
+            <div class="card-box flex flex-col items-start gap-[16px] p-6">
+              <div
+                class="inline-flex h-[48px] w-[48px] items-center justify-center rounded-lg bg-brand-50 text-brand-600 dark:bg-brand-700/30 dark:text-brand-100"
+              >
+                <svg
+                  class="h-[28px] w-[28px]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
                 >
-                  <dd class="stat-number">30 Giây Check-in</dd>
-                  <dt class="stat-label">
-                    Thao tác nhận phòng siêu tốc tại quầy lễ tân.
-                  </dt>
-                </div>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
+                </svg>
               </div>
-
-              <!-- Stat 4: Uptime -->
-              <div class="stat-card h-[150px]">
-                <div class="stat-icon-box bg-brand-50 text-brand-600">
-                  <svg
-                    class="h-[28px] w-[28px]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-
-                <div
-                  class="flex h-[86px] w-[256px] flex-col items-start gap-[8px]"
+              <div>
+                <dd
+                  class="font-display text-[24px] font-bold leading-[125%] text-ink dark:text-ink-invert"
                 >
-                  <dd class="stat-number">99.9% Thời gian</dd>
-                  <dt class="stat-label">
-                    Hạ tầng đám mây hoạt động liên tục, an toàn tuyệt đối.
-                  </dt>
-                </div>
+                  450,000+ Khách
+                </dd>
+                <dt
+                  class="font-body text-[16px] font-light leading-[150%] text-muted dark:text-muted-invert mt-1"
+                >
+                  Lượt đặt phòng xử lý thành công mỗi tháng.
+                </dt>
+              </div>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="card-box flex flex-col items-start gap-[16px] p-6">
+              <div
+                class="inline-flex h-[48px] w-[48px] items-center justify-center rounded-lg bg-brand-50 text-brand-600 dark:bg-brand-700/30 dark:text-brand-100"
+              >
+                <svg
+                  class="h-[28px] w-[28px]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <dd
+                  class="font-display text-[24px] font-bold leading-[125%] text-ink dark:text-ink-invert"
+                >
+                  30 Giây Check-in
+                </dd>
+                <dt
+                  class="font-body text-[16px] font-light leading-[150%] text-muted dark:text-muted-invert mt-1"
+                >
+                  Thao tác nhận phòng siêu tốc tại quầy lễ tân.
+                </dt>
+              </div>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="card-box flex flex-col items-start gap-[16px] p-6">
+              <div
+                class="inline-flex h-[48px] w-[48px] items-center justify-center rounded-lg bg-brand-50 text-brand-600 dark:bg-brand-700/30 dark:text-brand-100"
+              >
+                <svg
+                  class="h-[28px] w-[28px]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <dd
+                  class="font-display text-[24px] font-bold leading-[125%] text-ink dark:text-ink-invert"
+                >
+                  99.9% Thời gian
+                </dd>
+                <dt
+                  class="font-body text-[16px] font-light leading-[150%] text-muted dark:text-muted-invert mt-1"
+                >
+                  Hạ tầng đám mây hoạt động an toàn tuyệt đối.
+                </dt>
               </div>
             </div>
           </dl>
         </div>
       </section>
+
       <!-- ================================================================= -->
       <!-- SECTION 6: TESTIMONIALS (#testimonials)                           -->
       <!-- ================================================================= -->
       <section
         id="testimonials"
-        class="testimonial-section"
+        class="w-full bg-surface-subtle py-[96px] dark:bg-surface-subtle-dark"
         aria-labelledby="testimonials-title"
       >
-        <div class="testimonial-container">
+        <div class="section-container flex flex-col items-center">
           <h2 id="testimonials-title" class="sr-only">
             Đánh giá từ khách hàng
           </h2>
 
-          <figure class="testimonial-box">
-            <!-- Icon Quote -->
+          <figure
+            class="flex w-full max-w-[1216px] flex-col items-center gap-[24px] text-center"
+          >
             <svg
-              class="h-[36px] w-[48px] shrink-0 text-brand-600 opacity-60"
+              class="h-[36px] w-[48px] shrink-0 text-brand-600 opacity-60 dark:text-brand-100"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -725,416 +833,281 @@
               />
             </svg>
 
-            <!-- Text trích dẫn -->
-            <blockquote class="testimonial-quote">
+            <blockquote
+              class="font-display text-lg sm:text-xl lg:text-[24px] font-semibold leading-[162.5%] text-ink dark:text-ink-invert max-w-[768px]"
+            >
               "ResiStay đã thay đổi hoàn toàn cách chúng tôi vận hành khách sạn.
               Quy trình check-in rút ngắn từ 10 phút xuống còn 30 giây, không
               bao giờ còn tình trạng trùng phòng trên Agoda hay Booking."
             </blockquote>
 
-            <!-- Khối Customer -->
-            <figcaption class="testimonial-author">
+            <figcaption class="flex items-center justify-center gap-[14px]">
               <img
                 src="./assets/img/profile-picture-4.png"
                 alt="Chân dung Trần Nhật Nam"
-                class="testimonial-avatar"
+                class="h-[24px] w-[24px] rounded-full object-cover"
               />
 
-              <div class="flex h-[20px] items-center gap-[12px]">
-                <span class="testimonial-name">Trần Nhật Nam</span>
-                <span class="testimonial-name">/</span>
-                <cite class="testimonial-role">Palm Boutique</cite>
+              <div class="flex items-center gap-[12px] font-body">
+                <span
+                  class="text-[16px] font-semibold leading-[125%] text-ink dark:text-ink-invert"
+                  >Trần Nhật Nam</span
+                >
+                <span
+                  class="text-[16px] font-semibold leading-[125%] text-ink dark:text-ink-invert"
+                  >/</span
+                >
+                <cite
+                  class="not-italic text-[14px] font-normal leading-[125%] text-muted dark:text-muted-invert"
+                  >Palm Boutique</cite
+                >
               </div>
             </figcaption>
           </figure>
         </div>
       </section>
+
       <!-- ================================================================= -->
-      <!-- SECTION 7: PRICING (#pricing) - DÙNG COMPONENT GỌN GÀNG           -->
+      <!-- SECTION 7: PRICING (#pricing)                                     -->
       <!-- ================================================================= -->
       <section
         id="pricing"
-        class="pricing-section"
+        class="w-full bg-surface py-[96px] dark:bg-surface-dark"
         aria-labelledby="pricing-title"
       >
-        <div class="pricing-container">
-          <!-- Heading & Description -->
-          <div class="pricing-header-box">
-            <h2 id="pricing-title" class="pricing-heading">
+        <div class="section-container flex flex-col items-center gap-[48px]">
+          <div
+            class="flex w-full max-w-[1280px] flex-col items-center text-center gap-[16px]"
+          >
+            <h2
+              id="pricing-title"
+              class="font-display text-2xl sm:text-3xl lg:text-[36px] font-extrabold leading-[125%] tracking-[-0.01em] text-ink dark:text-ink-invert"
+            >
               Bảng giá linh hoạt theo quy mô phòng
             </h2>
-            <p class="pricing-desc">
+            <p
+              class="font-body text-base sm:text-lg lg:text-[20px] font-normal leading-[150%] text-muted dark:text-muted-invert max-w-[768px]"
+            >
               Lựa chọn gói dịch vụ tối ưu nhất cho cơ sở lưu trú của bạn. Dễ
               dàng nâng cấp hoặc hủy gói bất kỳ lúc nào.
             </p>
           </div>
 
-          <!-- 3 Thẻ bảng giá -->
-          <ul class="pricing-grid">
-            <!-- Thẻ 1: Starter / Mini -->
-            <li class="pricing-card">
-              <div class="pricing-card-content">
-                <div class="pricing-card-header">
-                  <h3 class="pricing-plan-title">Homestay / Mini</h3>
-                  <p class="pricing-plan-desc">
-                    Phù hợp cho homestay và khách sạn gia đình dưới 15 phòng.
-                  </p>
+          <ul
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-[40px] w-full"
+          >
+            <!-- Thẻ 1 -->
+            <li class="card-box flex flex-col justify-between p-6 lg:p-[32px]">
+              <div>
+                <h3
+                  class="font-display text-[24px] font-semibold leading-[150%] text-ink dark:text-ink-invert text-center"
+                >
+                  Homestay / Mini
+                </h3>
+                <p
+                  class="font-body text-[18px] font-normal leading-[150%] text-muted dark:text-muted-invert text-center mt-[16px]"
+                >
+                  Phù hợp cho homestay và khách sạn gia đình dưới 15 phòng.
+                </p>
+                <div
+                  class="flex justify-center items-baseline gap-[10px] my-[32px]"
+                >
+                  <span
+                    class="font-display text-[48px] font-extrabold leading-[48px] text-ink dark:text-ink-invert"
+                    >199k</span
+                  >
+                  <span
+                    class="font-body text-[18px] font-medium leading-[150%] text-muted dark:text-muted-invert"
+                    >/tháng</span
+                  >
                 </div>
-
-                <div class="pricing-price-box">
-                  <span class="pricing-price-num">199k</span>
-                  <span class="pricing-price-unit">/tháng</span>
-                </div>
-
-                <ul class="pricing-feature-list">
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Quản lý sơ đồ 15 phòng trống</span
-                    >
+                <ul class="space-y-[16px] text-[16px]">
+                  <li
+                    class="flex items-center gap-[10px] text-ink dark:text-ink-invert"
+                  >
+                    ✓ Quản lý sơ đồ 15 phòng trống
                   </li>
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Check-in / Check-out siêu tốc</span
-                    >
+                  <li
+                    class="flex items-center gap-[10px] text-ink dark:text-ink-invert"
+                  >
+                    ✓ Check-in / Check-out siêu tốc
                   </li>
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Báo cáo thu chi cơ bản trong ngày</span
-                    >
+                  <li
+                    class="flex items-center gap-[10px] text-ink dark:text-ink-invert"
+                  >
+                    ✓ Báo cáo thu chi cơ bản trong ngày
                   </li>
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Hỗ trợ kỹ thuật trực tuyến</span
-                    >
-                  </li>
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Cập nhật phần mềm định kỳ</span
-                    >
+                  <li
+                    class="flex items-center gap-[10px] text-ink dark:text-ink-invert"
+                  >
+                    ✓ Hỗ trợ kỹ thuật trực tuyến
                   </li>
                 </ul>
-
-                <a
-                  href="#cta"
-                  class="btn btn-outline mt-auto w-full h-[41px] font-body text-[14px]"
-                >
-                  Bắt đầu dùng thử
-                </a>
               </div>
+              <a
+                href="contact.html"
+                class="btn-outline w-full h-[41px] mt-[32px] text-[14px]"
+                >Bắt đầu dùng thử</a
+              >
             </li>
 
-            <!-- Thẻ 2: Company / Tiêu chuẩn (Nổi bật) -->
-            <li class="pricing-card-featured">
-              <div class="pricing-card-content">
-                <div class="pricing-card-header">
-                  <h3 class="pricing-plan-title">Khách sạn Vừa</h3>
-                  <p class="pricing-plan-desc">
-                    Lựa chọn tối ưu cho khách sạn từ 15 đến 50 phòng.
-                  </p>
+            <!-- Thẻ 2 (Nổi bật) -->
+            <li
+              class="card-box relative flex flex-col justify-between p-6 lg:p-[32px] border-2 border-brand-600 dark:border-brand-600"
+            >
+              <div>
+                <div class="text-center">
+                  <span class="badge-tag mb-[8px]">Phổ biến nhất</span>
+                  <h3
+                    class="font-display text-[24px] font-semibold leading-[150%] text-ink dark:text-ink-invert"
+                  >
+                    Khách sạn Vừa
+                  </h3>
                 </div>
-
-                <div class="pricing-price-box">
-                  <span class="pricing-price-num">499k</span>
-                  <span class="pricing-price-unit">/tháng</span>
+                <p
+                  class="font-body text-[18px] font-normal leading-[150%] text-muted dark:text-muted-invert text-center mt-[16px]"
+                >
+                  Lựa chọn tối ưu cho khách sạn từ 15 đến 50 phòng.
+                </p>
+                <div
+                  class="flex justify-center items-baseline gap-[10px] my-[32px]"
+                >
+                  <span
+                    class="font-display text-[48px] font-extrabold leading-[48px] text-ink dark:text-ink-invert"
+                    >499k</span
+                  >
+                  <span
+                    class="font-body text-[18px] font-medium leading-[150%] text-muted dark:text-muted-invert"
+                    >/tháng</span
+                  >
                 </div>
-
-                <ul class="pricing-feature-list">
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Quản lý không giới hạn phòng</span
-                    >
+                <ul class="space-y-[16px] text-[16px]">
+                  <li
+                    class="flex items-center gap-[10px] text-ink dark:text-ink-invert"
+                  >
+                    ✓ Quản lý không giới hạn phòng
                   </li>
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Đồng bộ 2 chiều OTA (Agoda, Booking)</span
-                    >
+                  <li
+                    class="flex items-center gap-[10px] text-ink dark:text-ink-invert"
+                  >
+                    ✓ Đồng bộ 2 chiều OTA (Agoda, Booking)
                   </li>
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Phân quyền lễ tân, kế toán & buồng phòng</span
-                    >
+                  <li
+                    class="flex items-center gap-[10px] text-ink dark:text-ink-invert"
+                  >
+                    ✓ Phân quyền lễ tân, kế toán & buồng phòng
                   </li>
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Hỗ trợ kỹ thuật ưu tiên 24/7</span
-                    >
-                  </li>
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Báo cáo tài chính nâng cao</span
-                    >
+                  <li
+                    class="flex items-center gap-[10px] text-ink dark:text-ink-invert"
+                  >
+                    ✓ Hỗ trợ kỹ thuật ưu tiên 24/7
                   </li>
                 </ul>
-
-                <a
-                  href="#cta"
-                  class="btn btn-primary mt-auto w-full h-[41px] font-body text-[14px]"
-                >
-                  Đăng ký ngay
-                </a>
               </div>
+              <a
+                href="contact.html"
+                class="btn-primary w-full h-[41px] mt-[32px] text-[14px]"
+                >Đăng ký ngay</a
+              >
             </li>
 
-            <!-- Thẻ 3: Enterprise / Chuỗi Resort -->
-            <li class="pricing-card">
-              <div class="pricing-card-content">
-                <div class="pricing-card-header">
-                  <h3 class="pricing-plan-title">Chuỗi Resort</h3>
-                  <p class="pricing-plan-desc">
-                    Dành cho chuỗi khách sạn và resort cao cấp trên 50 phòng.
-                  </p>
+            <!-- Thẻ 3 -->
+            <li class="card-box flex flex-col justify-between p-6 lg:p-[32px]">
+              <div>
+                <h3
+                  class="font-display text-[24px] font-semibold leading-[150%] text-ink dark:text-ink-invert text-center"
+                >
+                  Chuỗi Resort
+                </h3>
+                <p
+                  class="font-body text-[18px] font-normal leading-[150%] text-muted dark:text-muted-invert text-center mt-[16px]"
+                >
+                  Dành cho chuỗi khách sạn và resort cao cấp trên 50 phòng.
+                </p>
+                <div
+                  class="flex justify-center items-baseline gap-[10px] my-[32px]"
+                >
+                  <span
+                    class="font-display text-[48px] font-extrabold leading-[48px] text-ink dark:text-ink-invert"
+                    >1.299k</span
+                  >
+                  <span
+                    class="font-body text-[18px] font-medium leading-[150%] text-muted dark:text-muted-invert"
+                    >/tháng</span
+                  >
                 </div>
-
-                <div class="pricing-price-box">
-                  <span class="pricing-price-num">1.299k</span>
-                  <span class="pricing-price-unit">/tháng</span>
-                </div>
-
-                <ul class="pricing-feature-list">
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Tất cả tính năng gói Khách sạn Vừa</span
-                    >
+                <ul class="space-y-[16px] text-[16px]">
+                  <li
+                    class="flex items-center gap-[10px] text-ink dark:text-ink-invert"
+                  >
+                    ✓ Tất cả tính năng gói Khách sạn Vừa
                   </li>
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Quản trị chuỗi nhiều chi nhánh tập trung</span
-                    >
+                  <li
+                    class="flex items-center gap-[10px] text-ink dark:text-ink-invert"
+                  >
+                    ✓ Quản trị chuỗi nhiều chi nhánh tập trung
                   </li>
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Tích hợp khóa thẻ từ & máy in bill</span
-                    >
+                  <li
+                    class="flex items-center gap-[10px] text-ink dark:text-ink-invert"
+                  >
+                    ✓ Tích hợp khóa thẻ từ & máy in bill
                   </li>
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Chuyên viên hỗ trợ đào tạo tại chỗ</span
-                    >
-                  </li>
-                  <li class="pricing-feature-item">
-                    <svg
-                      class="pricing-feature-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="pricing-feature-text"
-                      >Cam kết SLA hoạt động 99.99%</span
-                    >
+                  <li
+                    class="flex items-center gap-[10px] text-ink dark:text-ink-invert"
+                  >
+                    ✓ Cam kết SLA hoạt động 99.99%
                   </li>
                 </ul>
-
-                <a
-                  href="#cta"
-                  class="btn btn-outline mt-auto w-full h-[41px] font-body text-[14px]"
-                >
-                  Liên hệ tư vấn
-                </a>
               </div>
+              <a
+                href="contact.html"
+                class="btn-outline w-full h-[41px] mt-[32px] text-[14px]"
+                >Liên hệ tư vấn</a
+              >
             </li>
           </ul>
         </div>
       </section>
+
       <!-- ================================================================= -->
-      <!-- SECTION 8: FAQ (#faq) - KHỚP 100% FIGMA                          -->
+      <!-- SECTION 8: FAQ (#faq)                                             -->
       <!-- ================================================================= -->
-      <section id="faq" class="faq-section" aria-labelledby="faq-title">
-        <div class="faq-container">
-          <!-- Heading -->
-          <div class="faq-heading-box">
-            <h2 id="faq-title" class="faq-heading">Câu hỏi thường gặp</h2>
+      <section
+        id="faq"
+        class="w-full bg-surface pb-[96px] dark:bg-surface-dark"
+        aria-labelledby="faq-title"
+      >
+        <div class="section-container flex flex-col items-center gap-[32px]">
+          <div
+            class="flex w-full max-w-[1280px] flex-col items-center text-center"
+          >
+            <h2
+              id="faq-title"
+              class="font-display text-2xl sm:text-3xl lg:text-[36px] font-extrabold leading-[125%] tracking-[-0.01em] text-ink dark:text-ink-invert"
+            >
+              Câu hỏi thường gặp
+            </h2>
           </div>
 
-          <!-- Accordion (w: 695px, h: 440px) -->
-          <div class="faq-accordion">
-            <!-- Accordion Item 1 (Đang mở) -->
-            <div class="faq-btn rounded-t-[8px]">
-              <div class="faq-header">
-                <span class="faq-title-active">
+          <div
+            class="flex w-full max-w-[695px] flex-col divide-y divide-line dark:divide-line-invert"
+          >
+            <div class="py-[24px]">
+              <div
+                class="flex justify-between items-center gap-4 cursor-pointer"
+              >
+                <span
+                  class="font-body font-medium text-[18px] leading-[18px] text-ink dark:text-ink-invert"
+                >
                   Phần mềm có tự động cập nhật phòng trống lên Agoda và Booking
                   không?
                 </span>
                 <svg
-                  class="faq-icon-active"
+                  class="h-[16px] w-[16px] shrink-0 text-brand-600 dark:text-brand-100"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   stroke-width="2"
-                  aria-hidden="true"
                 >
                   <path
                     stroke-linecap="round"
@@ -1143,229 +1116,353 @@
                   />
                 </svg>
               </div>
-
-              <!-- Separator -->
-              <div class="faq-divider"></div>
-
-              <!-- Accordion Body -->
-              <div class="faq-body">
-                <div class="faq-body-content">
-                  <p class="faq-body-text h-[72px]">
-                    Có. ResiStay kết nối trực tiếp 2 chiều với các kênh OTA lớn
-                    (Booking.com, Agoda, Traveloka, Airbnb). Khi phát sinh đặt
-                    phòng hoặc check-out tại quầy, số lượng phòng trống được cập
-                    nhật tức thì.
-                  </p>
-                  <p class="faq-body-text h-[24px]">
-                    Hệ thống triệt tiêu 100% rủi ro overbooking vào các dịp lễ
-                    tết và mùa cao điểm.
-                  </p>
-                  <p class="faq-body-text h-[24px]">
-                    Đồng thời tự động đồng bộ giá phòng linh hoạt theo từng
-                    chính sách khuyến mãi.
-                  </p>
-                </div>
+              <div
+                class="h-[1px] w-full bg-line dark:bg-line-invert my-[20px]"
+              ></div>
+              <div class="flex flex-col gap-[6px]">
+                <p
+                  class="font-body text-[16px] font-normal leading-[150%] text-muted dark:text-muted-invert"
+                >
+                  Có. ResiStay kết nối trực tiếp 2 chiều với các kênh OTA lớn
+                  (Booking.com, Agoda, Traveloka, Airbnb). Khi phát sinh đặt
+                  phòng hoặc check-out tại quầy, số lượng phòng trống được cập
+                  nhật tức thì.
+                </p>
+                <p
+                  class="font-body text-[16px] font-normal leading-[150%] text-muted dark:text-muted-invert"
+                >
+                  Hệ thống triệt tiêu 100% rủi ro overbooking vào các dịp lễ tết
+                  và mùa cao điểm.
+                </p>
               </div>
             </div>
 
-            <!-- Accordion Item 2 -->
-            <div class="faq-btn border-t border-line">
-              <div class="faq-header">
-                <span class="faq-title-inactive">
-                  Tôi có thể dùng thử miễn phí trước khi trả phí không?
-                </span>
-                <svg
-                  class="faq-icon-inactive"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
-              <div class="faq-divider"></div>
+            <div
+              class="py-[24px] flex justify-between items-center gap-4 cursor-pointer"
+            >
+              <span
+                class="font-body font-medium text-[18px] leading-[18px] text-muted hover:text-ink dark:text-muted-invert dark:hover:text-ink-invert"
+              >
+                Tôi có thể dùng thử miễn phí trước khi trả phí không?
+              </span>
+              <svg
+                class="h-[16px] w-[16px] shrink-0 text-muted"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </div>
 
-            <!-- Accordion Item 3 -->
-            <div class="faq-btn border-t border-line">
-              <div class="faq-header">
-                <span class="faq-title-inactive">
-                  Nếu mạng internet bị chập chờn thì lễ tân có dùng được không?
-                </span>
-                <svg
-                  class="faq-icon-inactive"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
-              <div class="faq-divider"></div>
-            </div>
-
-            <!-- Accordion Item 4 -->
-            <div class="faq-btn border-t border-line rounded-b-[8px]">
-              <div class="faq-header">
-                <span class="faq-title-inactive">
-                  Khách sạn có được hỗ trợ cài đặt và hướng dẫn nhân viên không?
-                </span>
-                <svg
-                  class="faq-icon-inactive"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
+            <div
+              class="py-[24px] flex justify-between items-center gap-4 cursor-pointer"
+            >
+              <span
+                class="font-body font-medium text-[18px] leading-[18px] text-muted hover:text-ink dark:text-muted-invert dark:hover:text-ink-invert"
+              >
+                Khách sạn có được hỗ trợ cài đặt và hướng dẫn nhân viên không?
+              </span>
+              <svg
+                class="h-[16px] w-[16px] shrink-0 text-muted"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </div>
           </div>
         </div>
       </section>
+
       <!-- ================================================================= -->
-      <!-- SECTION 9: CTA (#cta) - KHỚP 100% FIGMA                           -->
+      <!-- SECTION 9: CTA (#cta)                                             -->
       <!-- ================================================================= -->
-      <section id="cta" class="cta-section" aria-labelledby="cta-title">
-        <div class="cta-container">
-          <div class="cta-content">
-            <h2 id="cta-title" class="cta-heading">
+      <section
+        id="cta"
+        class="w-full bg-surface-subtle py-[96px] dark:bg-surface-subtle-dark"
+        aria-labelledby="cta-title"
+      >
+        <div class="section-container flex items-center justify-center">
+          <div
+            class="flex w-full max-w-[640px] flex-col items-center gap-[24px] text-center"
+          >
+            <h2
+              id="cta-title"
+              class="font-display text-2xl sm:text-3xl lg:text-[36px] font-extrabold leading-[125%] tracking-[-0.01em] text-ink dark:text-ink-invert"
+            >
               Bắt đầu chuyển đổi số khách sạn ngay hôm nay
             </h2>
-
-            <p class="cta-desc">
+            <p
+              class="font-body text-base sm:text-lg lg:text-[20px] font-normal leading-[150%] text-muted dark:text-muted-invert"
+            >
               Cài đặt nhanh chóng chỉ 10 phút, không cần thẻ ngân hàng.
             </p>
-
-            <a href="#pricing" class="cta-btn"> Dùng thử miễn phí </a>
+            <a
+              href="contact.html"
+              class="btn-primary h-[48px] w-[199px] px-[20px] py-[12px] text-[16px] leading-[150%]"
+            >
+              Dùng thử miễn phí
+            </a>
           </div>
         </div>
       </section>
+
       <!-- ================================================================= -->
-      <!-- 10. FOOTER (#footer) - KHỚP 100% FIGMA 5 CỘT                      -->
+      <!-- 10. FOOTER (#footer)                                              -->
       <!-- ================================================================= -->
-      <footer class="footer-section" aria-label="Chân trang">
-        <div class="footer-container">
-          <!-- 5 Cột Links Dàn Ngang (h: 221px, gap: 32px) -->
-          <div class="footer-nav-grid">
-            <!-- Cột 1: TÍNH NĂNG (h: 221px, 5 links) -->
-            <nav class="footer-col h-[221px]" aria-labelledby="footer-features">
-              <h3 id="footer-features" class="footer-heading">Tính năng</h3>
-              <ul class="footer-links h-[184px]">
-                <li class="footer-link-item">
-                  <a href="#features">Sơ đồ phòng</a>
+      <footer
+        class="w-full bg-surface border-t border-line dark:border-line-invert dark:bg-surface-dark"
+        aria-label="Chân trang"
+      >
+        <div
+          class="section-container flex flex-col items-center py-[64px] gap-[64px]"
+        >
+          <!-- 5 Cột Links Dàn Ngang -->
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-[32px] w-full"
+          >
+            <nav
+              class="flex flex-col items-start gap-[16px]"
+              aria-labelledby="footer-features"
+            >
+              <h3
+                id="footer-features"
+                class="font-display text-[14px] font-semibold uppercase leading-[150%] text-ink dark:text-ink-invert"
+              >
+                Tính năng
+              </h3>
+              <ul
+                class="flex flex-col items-start gap-[16px] font-body text-[16px] leading-[150%] text-muted dark:text-muted-invert"
+              >
+                <li>
+                  <a
+                    href="#features"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Sơ đồ phòng</a
+                  >
                 </li>
-                <li class="footer-link-item">
-                  <a href="#features">Đồng bộ OTA</a>
+                <li>
+                  <a
+                    href="#features"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Đồng bộ OTA</a
+                  >
                 </li>
-                <li class="footer-link-item">
-                  <a href="#features">Báo cáo doanh thu</a>
+                <li>
+                  <a
+                    href="#features"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Báo cáo doanh thu</a
+                  >
                 </li>
-                <li class="footer-link-item">
-                  <a href="#features">Quản lý buồng phòng</a>
+                <li>
+                  <a
+                    href="#features"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Quản lý buồng phòng</a
+                  >
                 </li>
-                <li class="footer-link-item">
-                  <a href="#features">Bàn giao ca trực</a>
+                <li>
+                  <a
+                    href="#features"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Bàn giao ca trực</a
+                  >
                 </li>
               </ul>
             </nav>
 
-            <!-- Cột 2: ĐỐI TÁC (h: 181px, 4 links) -->
-            <nav class="footer-col h-[181px]" aria-labelledby="footer-partners">
-              <h3 id="footer-partners" class="footer-heading">
+            <nav
+              class="flex flex-col items-start gap-[16px]"
+              aria-labelledby="footer-partners"
+            >
+              <h3
+                id="footer-partners"
+                class="font-display text-[14px] font-semibold uppercase leading-[150%] text-ink dark:text-ink-invert"
+              >
                 Đối tác liên kết
               </h3>
-              <ul class="footer-links h-[144px]">
-                <li class="footer-link-item">
-                  <a href="#brands">Booking.com</a>
+              <ul
+                class="flex flex-col items-start gap-[16px] font-body text-[16px] leading-[150%] text-muted dark:text-muted-invert"
+              >
+                <li>
+                  <a
+                    href="#brands"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Booking.com</a
+                  >
                 </li>
-                <li class="footer-link-item">
-                  <a href="#brands">Agoda Partner</a>
+                <li>
+                  <a
+                    href="#brands"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Agoda Partner</a
+                  >
                 </li>
-                <li class="footer-link-item">
-                  <a href="#brands">Traveloka OTA</a>
+                <li>
+                  <a
+                    href="#brands"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Traveloka OTA</a
+                  >
                 </li>
-                <li class="footer-link-item">
-                  <a href="#brands">Airbnb Host</a>
-                </li>
-              </ul>
-            </nav>
-
-            <!-- Cột 3: HỖ TRỢ (h: 181px, 4 links) -->
-            <nav class="footer-col h-[181px]" aria-labelledby="footer-support">
-              <h3 id="footer-support" class="footer-heading">Hỗ trợ</h3>
-              <ul class="footer-links h-[144px]">
-                <li class="footer-link-item">
-                  <a href="#faq">Trung tâm trợ giúp</a>
-                </li>
-                <li class="footer-link-item">
-                  <a href="#faq">Tài liệu API</a>
-                </li>
-                <li class="footer-link-item">
-                  <a href="#faq">Đào tạo nhân sự</a>
-                </li>
-                <li class="footer-link-item">
-                  <a href="#pricing">Liên hệ kỹ thuật</a>
-                </li>
-              </ul>
-            </nav>
-
-            <!-- Cột 4: PHÁP LÝ (h: 221px, 5 links) -->
-            <nav class="footer-col h-[221px]" aria-labelledby="footer-legal">
-              <h3 id="footer-legal" class="footer-heading">Pháp lý</h3>
-              <ul class="footer-links h-[184px]">
-                <li class="footer-link-item">
-                  <a href="#">Chính sách bảo mật</a>
-                </li>
-                <li class="footer-link-item">
-                  <a href="#">Điều khoản dịch vụ</a>
-                </li>
-                <li class="footer-link-item">
-                  <a href="#">Bảo mật dữ liệu</a>
-                </li>
-                <li class="footer-link-item"><a href="#">Thỏa thuận SLA</a></li>
-                <li class="footer-link-item">
-                  <a href="#">Quy chế đối soát</a>
+                <li>
+                  <a
+                    href="#brands"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Airbnb Host</a
+                  >
                 </li>
               </ul>
             </nav>
 
-            <!-- Cột 5: VỀ RESISTAY (h: 141px, 3 links) -->
-            <nav class="footer-col h-[141px]" aria-labelledby="footer-company">
-              <h3 id="footer-company" class="footer-heading">Về ResiStay</h3>
-              <ul class="footer-links h-[104px]">
-                <li class="footer-link-item">
-                  <a href="#hero">Giới thiệu công ty</a>
+            <nav
+              class="flex flex-col items-start gap-[16px]"
+              aria-labelledby="footer-support"
+            >
+              <h3
+                id="footer-support"
+                class="font-display text-[14px] font-semibold uppercase leading-[150%] text-ink dark:text-ink-invert"
+              >
+                Hỗ trợ
+              </h3>
+              <ul
+                class="flex flex-col items-start gap-[16px] font-body text-[16px] leading-[150%] text-muted dark:text-muted-invert"
+              >
+                <li>
+                  <a
+                    href="#faq"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Trung tâm trợ giúp</a
+                  >
                 </li>
-                <li class="footer-link-item">
-                  <a href="#testimonials">Khách hàng tiêu biểu</a>
+                <li>
+                  <a
+                    href="#faq"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Tài liệu API</a
+                  >
                 </li>
-                <li class="footer-link-item"><a href="#">Tuyển dụng</a></li>
+                <li>
+                  <a
+                    href="#faq"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Đào tạo nhân sự</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="pricing.html"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Liên hệ kỹ thuật</a
+                  >
+                </li>
+              </ul>
+            </nav>
+
+            <nav
+              class="flex flex-col items-start gap-[16px]"
+              aria-labelledby="footer-legal"
+            >
+              <h3
+                id="footer-legal"
+                class="font-display text-[14px] font-semibold uppercase leading-[150%] text-ink dark:text-ink-invert"
+              >
+                Pháp lý
+              </h3>
+              <ul
+                class="flex flex-col items-start gap-[16px] font-body text-[16px] leading-[150%] text-muted dark:text-muted-invert"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Chính sách bảo mật</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Điều khoản dịch vụ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Bảo mật dữ liệu</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Thỏa thuận SLA</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Quy chế đối soát</a
+                  >
+                </li>
+              </ul>
+            </nav>
+
+            <nav
+              class="flex flex-col items-start gap-[16px]"
+              aria-labelledby="footer-company"
+            >
+              <h3
+                id="footer-company"
+                class="font-display text-[14px] font-semibold uppercase leading-[150%] text-ink dark:text-ink-invert"
+              >
+                Về ResiStay
+              </h3>
+              <ul
+                class="flex flex-col items-start gap-[16px] font-body text-[16px] leading-[150%] text-muted dark:text-muted-invert"
+              >
+                <li>
+                  <a
+                    href="#hero"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Giới thiệu công ty</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#testimonials"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Khách hàng tiêu biểu</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-brand-600 dark:hover:text-brand-100"
+                    >Tuyển dụng</a
+                  >
+                </li>
               </ul>
             </nav>
           </div>
 
-          <!-- Logo, Bản quyền & Mạng xã hội (w: 384px, h: 124px, gap: 20px) -->
-          <div class="footer-bottom-box">
-            <!-- Logo Footer (w: 155.76px, h: 36px, gap: 12px) -->
+          <!-- Logo, Bản quyền & Mạng xã hội -->
+          <div class="flex flex-col items-center gap-[20px] text-center">
             <a
               href="index.html"
               class="flex h-[36px] w-[155.76px] items-center justify-center gap-[12px]"
@@ -1383,26 +1480,30 @@
                 <path d="M16 22H24V29H16V22Z" fill="#FFFFFF" />
               </svg>
               <span
-                class="font-display text-[24px] font-semibold leading-[150%] tracking-tight text-ink"
+                class="font-display text-[24px] font-semibold leading-[150%] tracking-tight text-ink dark:text-ink-invert"
               >
                 ResiStay
               </span>
             </a>
 
-            <!-- Dòng bản quyền (h: 24px) -->
-            <p class="footer-copy">
+            <p
+              class="font-body text-[16px] font-normal leading-[150%] text-muted dark:text-muted-invert"
+            >
               © 2026 ResiStay. Bản quyền thuộc môn Thực hành Thiết kế Web.
             </p>
 
-            <!-- Social Icons (w: 156px, h: 24px, gap: 20px) -->
-            <div class="footer-social-box">
-              <!-- GitHub -->
-              <a href="#" class="footer-social-icon" aria-label="GitHub">
+            <div
+              class="flex h-[24px] w-[156px] items-center justify-center gap-[20px] text-muted dark:text-muted-invert"
+            >
+              <a
+                href="#"
+                class="hover:text-ink dark:hover:text-ink-invert transition-colors"
+                aria-label="GitHub"
+              >
                 <svg
-                  class="h-[24px] w-[24px]"
+                  class="h-[24px] w-[24px] shrink-0"
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  aria-hidden="true"
                 >
                   <path
                     fill-rule="evenodd"
@@ -1411,44 +1512,30 @@
                   />
                 </svg>
               </a>
-
-              <!-- Twitter / X -->
-              <a href="#" class="footer-social-icon" aria-label="Twitter">
+              <a
+                href="#"
+                class="hover:text-ink dark:hover:text-ink-invert transition-colors"
+                aria-label="Twitter"
+              >
                 <svg
-                  class="h-[24px] w-[24px]"
+                  class="h-[24px] w-[24px] shrink-0"
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  aria-hidden="true"
                 >
                   <path
                     d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
                   />
                 </svg>
               </a>
-
-              <!-- Dribbble -->
-              <a href="#" class="footer-social-icon" aria-label="Dribbble">
+              <a
+                href="#"
+                class="hover:text-ink dark:hover:text-ink-invert transition-colors"
+                aria-label="Facebook"
+              >
                 <svg
-                  class="h-[24px] w-[24px]"
+                  class="h-[24px] w-[24px] shrink-0"
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.19 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.99 1.01-7.46 1.03-7.87 1.03 1.1-3.52 3.99-6.17 7.7-6.965zM3.475 12v-.242c.43 0 4.31-.03 8.57-1.15.19.38.38.77.55 1.16a62.99 62.99 0 01-5.28 7.42A8.528 8.528 0 013.475 12zm8.525 8.525c-1.78 0-3.4-.55-4.75-1.48.56-.84 2.87-4.14 5.37-7.23 2.16.27 4.18.98 5.06 1.34-1.23 4.37-5.25 7.37-9.68 7.37zm7.5-3.67c-.77-.32-2.56-.96-4.57-1.22 2.62-.35 5.24.16 5.54.22-.16.36-.57 2.13-1.97 4.02z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </a>
-
-              <!-- Facebook -->
-              <a href="#" class="footer-social-icon" aria-label="Facebook">
-                <svg
-                  class="h-[24px] w-[24px]"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
                 >
                   <path
                     fill-rule="evenodd"
